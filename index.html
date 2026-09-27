@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06121f">
+  <meta name="description" content="Mahim's personal corner of the internet — links, code, socials and more.">
+  <meta property="og:title" content="Mahim — Personal Space">
+  <meta property="og:description" content="Mahim's personal corner of the internet — links, code, socials and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/mahim.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Mahim — Personal Space</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <div class="atmosphere" aria-hidden="true">
+      <div class="noise"></div>
+      <div class="aurora aurora-a"></div>
+      <div class="aurora aurora-b"></div>
+      <div class="stars"></div>
+      <div class="horizon"></div>
+      <div class="mist mist-a"></div>
+      <div class="mist mist-b"></div>
+    </div>
+
+    <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+      <div class="intro-backdrop"></div>
+      <div class="intro-content">
+        <div class="eyebrow"><span class="status-dot"></span> A PRIVATE FREQUENCY</div>
+        <div class="intro-compass" aria-hidden="true">
+          <span>N</span><span>E</span><span>S</span><span>W</span><i></i>
+        </div>
+        <p class="intro-kicker">WELCOME ABOARD</p>
+        <h1 id="intro-title">Mahim's little ocean.</h1>
+        <p class="intro-copy">There's a tiny soundtrack playing in the background.<br><em>Your call.</em></p>
+        <div class="intro-actions">
+          <button class="btn btn-primary intro-choice" data-audio="on">
+            <span>YES</span><span class="btn-arrow">↗</span>
+          </button>
+          <button class="btn btn-ghost intro-choice" data-audio="off">
+            <span>MUTE</span><span class="btn-arrow">↘</span>
+          </button>
+        </div>
+        <p class="intro-note">sound begins only after your choice</p>
+      </div>
+    </div>
+
+    <audio id="bgMusic" src="assets/music.mp3" loop preload="metadata"></audio>
+
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Mahim home">
+        <span class="brand-mark">M</span>
+        <span>MAHIM</span>
+      </a>
+      <div class="nav-right">
+        <button class="icon-btn music-toggle" id="musicToggle" type="button" aria-label="Turn music on" aria-pressed="false" title="Music">
+          <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="music-label">MUSIC</span>
+        </button>
+        <a class="nav-explore" href="#deck">EXPLORE <span>↓</span></a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="micro-row reveal">
+            <span class="status-pill"><i></i> online somewhere on the internet</span>
+            <span class="coordinates">23°48'N · 90°25'E</span>
+          </div>
+
+          <p class="hero-intro reveal">HELLO, I'M</p>
+          <h1 class="hero-title reveal" id="hero-title">Mahim<span class="cursor">_</span></h1>
+
+          <p class="hero-description reveal">
+            A personal corner for my links, work, and internet identity.
+            <strong>Simple, animated, a little cinematic</strong> — built to feel like my own deck at sea.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#deck">
+              <span>ENTER THE DECK</span><span class="btn-arrow">↓</span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/freakMahim" target="_blank" rel="noopener noreferrer">
+              <span>VIEW GITHUB</span><span class="btn-arrow">↗</span>
+            </a>
+          </div>
+
+          <button class="email-chip reveal" id="emailCopy" type="button" title="Copy email address">
+            <span class="email-icon">@</span>
+            <span class="email-text">freakmahim@gmail.com</span>
+            <span class="copy-state" aria-live="polite">copy</span>
+          </button>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Mahim profile card">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-dot dot-one"></div>
+          <div class="orbit-dot dot-two"></div>
+          <div class="profile-card" data-tilt>
+            <div class="profile-top">
+              <span>CAPTAIN'S LOG</span>
+              <span class="card-index">01 / 01</span>
+            </div>
+            <div class="portrait-wrap">
+              <div class="portrait-glow"></div>
+              <img src="assets/mahim.png" alt="Portrait of Mahim" class="portrait" id="profileImage">
+              <div class="scanline"></div>
+              <div class="portrait-corner corner-tl"></div>
+              <div class="portrait-corner corner-br"></div>
+            </div>
+            <div class="profile-bottom">
+              <div>
+                <h2>Mahim</h2>
+                <p>Code · socials · late-night ideas</p>
+              </div>
+              <div class="profile-meta">
+                <span>EST. 2026</span>
+                <span>KEEP MOVING</span>
+              </div>
+            </div>
+          </div>
+          <div class="floating-tag tag-a">SEA / 001</div>
+          <div class="floating-tag tag-b">KEEP MOVING</div>
+        </div>
+      </section>
+
+      <section class="deck section-wrap" id="deck" aria-labelledby="deck-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">THE DECK <span>✦</span></p>
+            <h2 id="deck-title">Find me around.</h2>
+          </div>
+          <p class="section-helper">click a card <span>→</span> open destination</p>
+        </div>
+
+        <div class="social-grid">
+          <a class="social-card" href="https://github.com/freakMahim" target="_blank" rel="noopener noreferrer" data-platform="github">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 .6A11.4 11.4 0 0 0 8.4 22.8c.57.1.78-.25.78-.55v-2.15c-3.18.69-3.85-1.35-3.85-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.54-.29-5.2-1.27-5.2-5.66 0-1.25.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.09 0 4.4-2.67 5.36-5.21 5.64.41.36.77 1.07.77 2.17v3.22c0 .3.21.66.79.55A11.4 11.4 0 0 0 12 .6Z"/></svg>
+            </div>
+            <div class="social-info"><span class="social-name">GitHub</span><strong>freakMahim</strong><p>code, experiments &amp; builds</p></div>
+            <span class="social-arrow">↗</span>
+          </a>
+
+          <a class="social-card" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=freakmahim@gmail.com" target="_blank" rel="noopener noreferrer" data-platform="gmail">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2.8 5.8A2.8 2.8 0 0 1 5.6 3h12.8a2.8 2.8 0 0 1 2.8 2.8v12.4a2.8 2.8 0 0 1-2.8 2.8H5.6a2.8 2.8 0 0 1-2.8-2.8V5.8Zm2.1.2v.3l7.1 5.45 7.1-5.45V6a.7.7 0 0 0-.7-.7H5.6a.7.7 0 0 0-.7.7Zm14.2 2.96-6.46 4.96a1 1 0 0 1-1.22 0L4.9 8.96v9.24c0 .39.31.7.7.7h12.8c.39 0 .7-.31.7-.7V8.96Z"/></svg>
+            </div>
+            <div class="social-info"><span class="social-name">Gmail</span><strong>freakmahim@gmail.com</strong><p>click → Gmail compose opens</p></div>
+            <span class="social-arrow">↗</span>
+          </a>
+
+          <a class="social-card" href="https://www.linkedin.com/in/mohsin-islam-mahim-ab82b642b/" target="_blank" rel="noopener noreferrer" data-platform="linkedin">
+            <div class="card-icon" aria-hidden="true"><span class="linkedin-icon">in</span></div>
+            <div class="social-info"><span class="social-name">LinkedIn</span><strong>Mohsin Islam Mahim</strong><p>professional corner</p></div>
+            <span class="social-arrow">↗</span>
+          </a>
+
+          <a class="social-card" href="https://www.instagram.com/tyrannosaurusrawrr/" target="_blank" rel="noopener noreferrer" data-platform="instagram">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.5" cy="6.8" r="1"/></svg>
+            </div>
+            <div class="social-info"><span class="social-name">Instagram</span><strong>@tyrannosaurusrawrr</strong><p>photos, stories &amp; chaos</p></div>
+            <span class="social-arrow">↗</span>
+          </a>
+
+          <a class="social-card" href="https://www.facebook.com/esdeeemhm" target="_blank" rel="noopener noreferrer" data-platform="facebook">
+            <div class="card-icon" aria-hidden="true"><span class="facebook-icon">f</span></div>
+            <div class="social-info"><span class="social-name">Facebook</span><strong>esdeeemhm</strong><p>another place to find me</p></div>
+            <span class="social-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="signal section-wrap" aria-label="Personal note">
+        <div class="signal-line"></div>
+        <div class="signal-content">
+          <span class="signal-code">LOG // 2026</span>
+          <p>Somewhere between <em>code, curiosity</em> and the next horizon.</p>
+          <span class="signal-coord">N 23°48' · E 90°25'</span>
+        </div>
+        <div class="signal-line"></div>
+      </section>
+    </main>
+
+    <footer class="footer section-wrap">
+      <span>© 2026 Mahim</span>
+      <span class="footer-center">made with caffeine + code</span>
+      <a href="#top">back to surface ↑</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
